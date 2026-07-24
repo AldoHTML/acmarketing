@@ -362,23 +362,25 @@ src="https://www.facebook.com/tr?id=1801250814364730&ev=PageView&noscript=1"
 
 
 <script>
-  // CTA / contact forms: front-end only. Connect to Formspree or your backend to actually receive messages.
+  // CTA / contact forms: front-end only. Connect to Formspree o tu backend para recibir los mensajes.
   var ctaForm = document.getElementById('ctaForm');
-  if (ctaForm) {{
-    ctaForm.addEventListener('submit', function(e) {{
+  if (ctaForm) {
+    ctaForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      fbq('track', 'Lead');
       document.getElementById('ctaForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
-    }});
-  }}
+    });
+  }
   var contactForm = document.getElementById('contactForm');
-  if (contactForm) {{
-    contactForm.addEventListener('submit', function(e) {{
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      fbq('track', 'Lead');
       document.getElementById('contactForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
-    }});
-  }}
+    });
+  }
 </script>
 </body>
 </html>
